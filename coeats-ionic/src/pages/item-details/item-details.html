@@ -1,0 +1,54 @@
+<!--
+  Generated template for the ItemDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="coeats-red">
+    <button ion-button clear (click)="redirectHomepage()">
+      <ion-title>COEATS</ion-title>
+    </button>
+    <ion-buttons end>
+        <button ion-button large (click)="redirectToCart()">
+          <ion-icon id="cart-icon" name="cart"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="item-info" align="center">
+    <img *ngIf="item.img!='None'" class='item-img' src="{{item.img}}">
+
+    <h2>{{item.name}}</h2>
+
+    <p>
+      {{item.description}}
+    </p>
+    <p><b>${{item.price}}</b>
+
+    </p>
+  </div>
+  <!-- <div ng-controller="CounterCtrl" align="center"> -->
+  <div align="center">
+    <button ion-button clear (click)="minusOne()">
+      <ion-icon icon-start name="ios-remove-circle-outline" ></ion-icon>
+    </button>
+    <!-- {{ quantity == -1 ? 1 : quantity }} -->
+    {{quantity}}
+      <!-- {{item.quantity}} -->
+    <button ion-button clear (click)="plusOne()">
+      <ion-icon icon-end name="ios-add-circle-outline" ></ion-icon>
+    </button>
+  </div>
+
+  <div align="center" id="addToCart-div">
+    <button ion-button id="addToCart-button" (click)="addToCart(item, quantity)">Add to cart</button>
+  </div>
+
+
+</ion-content>

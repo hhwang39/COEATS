@@ -1,0 +1,26 @@
+page-item-details {
+  .centered {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .center{
+   text-align:center;
+   display: inline-block;
+   width: 100%;
+ }
+
+ #addToCart-button{
+   width: 100%;
+ }
+
+ #addToCart-div{
+   padding-top: 0.5rem;
+ }
+
+ #cart-icon{
+   font-size: 2.2rem;
+ }
+}

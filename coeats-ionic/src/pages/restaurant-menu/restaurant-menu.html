@@ -1,0 +1,64 @@
+<!--
+  Generated template for the RestaurantMenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="coeats-red">
+    <button ion-button clear (click)="redirectHomepage()">
+      <ion-title>COEATS</ion-title>
+    </button>
+    <ion-buttons end>
+        <button ion-button large (click)="redirectToCart()">
+          <ion-icon id="cart-icon" name="cart"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class='restaurant-info' *ngIf="restaurant">
+    <img class='restaurant-img' src="{{restaurant.img}}">
+    <div class="centered">
+      <h1>{{restaurant.name}}</h1>
+      <p>Open hours: 12pm - 10pm</p>
+      <p>(404) 123-4567</p>
+    </div>
+  </div>
+  <!-- {{restaurant.items}} -->
+  <ion-list>
+
+    <button ion-item *ngFor="let item of restaurant.items" (click)="itemTapped(item, restaurant)">
+      <!-- <ion-thumbnail *ngIf="item.img!='None'" item-start>
+        <img src={{item.img}} />
+      </ion-thumbnail> -->
+      <h3>{{item.name}}</h3>
+      <p>{{item.description}}</p>
+      <ion-note class='note-right' item-end>
+        <p color=black>
+          $ {{item.price}}
+        </p>
+      </ion-note>
+    </button>
+
+  </ion-list>
+
+  <!-- <div align="center"> -->
+
+
+    <!-- <button ion-button icon-start (click)="test()"> -->
+      <!-- Single Order -->
+    <!-- </button> -->
+
+    <!-- <button ion-button icon-end (click)="test()"> -->
+      <!-- Group Order -->
+    <!-- </button> -->
+  <!-- </div> -->
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button id="checkout-button" (click)="redirectToCart()">Checkout</button>
+  </ion-toolbar>
+</ion-footer>

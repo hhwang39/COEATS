@@ -1,0 +1,64 @@
+<!--
+  Generated template for the OrderConfirmationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="coeats-red">
+    <button ion-button clear (click)="redirectHomepage()">
+      <ion-title>COEATS</ion-title>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content *ngIf="restaurantId=='null'" padding>
+  <div class="item-info" align="center">
+    <h2>Order Summary</h2>
+    <h3>Your cart is empty!</h3>
+  </div>
+</ion-content>
+
+<ion-content *ngIf="restaurantId!='null'"padding>
+  <div class="item-info" align="center">
+    <h2>Order Summary</h2>
+  </div>
+  <div class='restaurant-name'>
+    <h4><u>{{restaurantName}}</u></h4>
+  </div>
+
+
+  <ion-list>
+    <button ion-item *ngFor="let item of items">
+      <p *ngIf="itemsQuantities[item]!=0" item-start>
+        {{itemsQuantities[item]}} x {{itemsNames[item]}}
+      </p>
+      <ion-note class='note-right' *ngIf="itemsQuantities[item]!=0" item-end>
+        <p color=black>
+          $ {{itemsCosts[item]}}
+        </p>
+      </ion-note>
+    </button>
+    <ion-item>
+      <p item-start>
+        <b>Total</b>
+      </p>
+      <p item-end>
+        <b>${{total}}</b>
+      </p>
+    </ion-item>
+    <!-- <button ion-item *ngFor="let item of openOrders" (click)="itemTapped($event, item)"> -->
+    <!-- <button ion-item *ngFor="let item of openOrders" (click)="itemTapped($event, item)"> -->
+
+  </ion-list>
+
+  <div align="center">
+    <button ion-button id="ind-order-button" (click)="placeIndOrder()" side="left">Individual order</button>
+    <button ion-button id="coeats-button" (click)="placeCoeats()" side="right">COEATS!</button>
+  </div>
+  <div align="center">
+    <button ion-button color="light" id="empty-cart-button" (click)="emptyCart()">Empty Cart</button>
+  </div>
+</ion-content>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/menu_background">
+
+    <TextView
+        android:id="@+id/sum_resName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rationale"
+        android:text="COEATS International Restaurant"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/menu_resinfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/menu_listView"
+        android:layout_below="@+id/sum_resName"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="#80000000"
+        app:layout_constraintBottom_toTopOf="@+id/menu_listView"
+        app:layout_constraintTop_toBottomOf="@+id/sum_resName"
+        app:layout_constraintVertical_weight="1"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ListView
+        android:id="@+id/menu_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/menu_indiv"
+        android:layout_below="@id/menu_resinfo"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+
+        android:background="#80000000"
+        app:layout_constraintBottom_toTopOf="@+id/menu_indiv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_resinfo"
+        app:layout_constraintVertical_weight="2"></ListView>
+
+    <Button
+        android:id="@+id/menu_indiv"
+        android:layout_width="130dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/menu_listView"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="30dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/finger_paint"
+        android:text="Individual Order"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/menu_coorder"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/menu_coorder"
+        android:layout_width="130dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/menu_listView"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="20dp"
+        android:background="@android:color/holo_orange_dark"
+        android:fontFamily="@font/finger_paint"
+        android:text="COEATS!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/menu_indiv" />
+
+</android.support.constraint.ConstraintLayout>

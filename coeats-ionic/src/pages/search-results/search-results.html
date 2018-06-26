@@ -1,0 +1,56 @@
+<!--
+  Generated template for the SearchResultsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="coeats-red">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button ion-button clear (click)="redirectHomepage()">
+      <ion-title>COEATS</ion-title>
+    </button>
+    <ion-buttons end>
+        <button ion-button (click)="login()" color="light">
+          Log in
+          <!-- <ion-icon name="options"></ion-icon> -->
+        </button>
+    </ion-buttons>
+      <!-- <button ion-button (click)="signup()" color="light" end>Sign Up</button> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h5 color="grey">Restaurants</h5>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of restaurants" (click)="restTapped($event, item)">
+      <ion-thumbnail class="thumbnail" item-start>
+        <img class="thumbnail-img" src={{item.logo}}>
+      </ion-thumbnail>
+      <h2>{{item.name}}</h2>
+      <p *ngIf="item.open==true">
+        Open
+      </p>
+      <p *ngIf="item.open!=true">
+        Closed
+      </p>
+      <ion-note item-end>
+        <p>
+          <ion-icon name="time"></ion-icon>
+          min {{item.min_wait_time}}
+        </p>
+        <p>
+          <ion-icon name="time"></ion-icon>
+          max {{item.max_wait_time}}
+        </p>
+     </ion-note>
+    </button>
+  </ion-list>
+
+</ion-content>

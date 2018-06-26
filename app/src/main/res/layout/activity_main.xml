@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/signin_background"
+    tools:context="com.example.pigdtt12345.coeats.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="256dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/BtmSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/TextUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="@string/username"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/InputUsername"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/white"
+            android:textColorLink="@android:color/white"
+            android:theme="@style/MyEditText" />
+
+        <TextView
+            android:id="@+id/TextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="@string/password"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/InputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="@android:color/white"
+            android:textColorLink="@android:color/white"
+            android:theme="@style/MyEditText" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BtmSignIn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568" />
+
+    <Button
+        android:id="@+id/BtmSignUp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="195dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="82dp"
+        android:layout_marginTop="96dp"
+        android:background="@color/colorPrimary"
+        android:text="Sign up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtmSignIn"
+        app:layout_constraintVertical_bias="0.741" />
+
+</android.support.constraint.ConstraintLayout>

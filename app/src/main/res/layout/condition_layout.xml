@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/condition"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/condition_background">
+
+    <TextView
+        android:id="@+id/condition_text_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Minimum amount of the order:"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/condition_input_money"
+        style="@android:style/Widget.DeviceDefault.Light.EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="95dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="25dp"
+        android:background="#B3000000"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="none|number"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:theme="@style/MyEditText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_text_money" />
+
+    <TextView
+        android:id="@+id/condition_text_money_dollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="63dp"
+        android:text="$"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/condition_input_money"
+        app:layout_constraintEnd_toStartOf="@+id/condition_input_money"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/condition_text_time"
+        android:layout_width="263dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="237dp"
+        android:layout_marginTop="20dp"
+        android:text="Maximum waiting time :"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_input_money" />
+
+    <EditText
+        android:id="@+id/condition_input_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="95dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="25dp"
+        android:background="#B3000000"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="2"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:theme="@style/MyEditText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_text_time" />
+
+    <TextView
+        android:id="@+id/condition_text_time_min"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginStart="15dp"
+        android:text="min"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/condition_input_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/condition_input_time" />
+
+    <TextView
+        android:id="@+id/condition_text_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Minimum people :"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_input_time" />
+
+    <EditText
+        android:id="@+id/condition_input_people"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="95dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="25dp"
+        android:background="#B3000000"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:theme="@style/MyEditText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_text_people" />
+
+    <Button
+        android:id="@+id/condition_button"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="27dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_input_people" />
+
+</android.support.constraint.ConstraintLayout>

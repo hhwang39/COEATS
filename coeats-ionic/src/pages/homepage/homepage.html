@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="coeats-red">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button ion-button clear (click)="redirectHomepage()">
+      <ion-title>COEATS</ion-title>
+    </button>
+    <ion-buttons end>
+        <button ion-button (click)="login()" color="light">
+          Log in
+          <!-- <ion-icon name="options"></ion-icon> -->
+        </button>
+    </ion-buttons>
+      <!-- <button ion-button (click)="signup()" color="light" end>Sign Up</button> -->
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel"
+    (search)="onSearch($event)">
+  </ion-searchbar>
+
+  <!-- OPEN ORD ERS -->
+
+  <h5 color="grey">Open Orders Near You</h5>
+
+  <ion-list>
+
+    <button ion-item *ngFor="let item of openOrders" (click)="itemTapped($event, item)">
+      <ion-thumbnail *ngIf="item.restImg!='null'" class="thumbnail" item-start>
+        <img class="thumbnail-img" src="{{item.restImg}}">
+      </ion-thumbnail>
+      <h2>{{item.restName}}</h2>
+      <p>
+        {{item.foodTypes}}
+      </p>
+      <p>
+         {{item.distance}} {{item.distMeasure}}
+      </p>
+
+      <ion-note item-end>
+        <p>
+          <ion-icon name="time"></ion-icon>
+          {{item.time}} min
+        </p>
+        <p>
+          <ion-icon name="person"></ion-icon>
+          {{item.njoined}} / {{item.minPeople}}
+        </p>
+       </ion-note>
+    </button>
+  </ion-list>
+
+
+  <!-- RESTAURANTS -->
+
+  <h5 color="grey">Restaurants Near You</h5>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of restaurants" (click)="restTapped($event, item)">
+      <ion-thumbnail class="thumbnail" item-start>
+        <img class="thumbnail-img" src={{item.logo}}>
+      </ion-thumbnail>
+      <h2>{{item.name}}</h2>
+      <p *ngIf="item.open==true">
+        Open
+      </p>
+      <p *ngIf="item.open!=true">
+        Closed
+      </p>
+      <ion-note item-end>
+        <p>
+          <ion-icon name="time"></ion-icon>
+          min {{item.min_wait_time}}
+        </p>
+        <p>
+          <ion-icon name="time"></ion-icon>
+          max {{item.max_wait_time}}
+        </p>
+     </ion-note>
+    </button>
+  </ion-list>
+
+</ion-content>

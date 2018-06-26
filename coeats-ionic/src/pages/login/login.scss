@@ -1,0 +1,57 @@
+page-login {
+
+  ion-content{
+    .div-logo{
+      background-color: color($colors, coeats-red);
+    }
+    .login-box{
+      padding-top: 25px;
+      height: 100%;
+      display: block;
+      vertical-align: middle;
+    }
+    .text-input-md {
+      text-align: center;
+      padding: 0px;
+      // width: calc(100% - 8px - 8px);
+    }
+    .input-cover{
+      padding: 10px;
+    }
+
+    .div-submit-button{
+      display: inline-block;
+      width: 100%;
+    }
+
+    .div-signup-button{
+      display: inline-block;
+      width: 100%;
+      padding-top: 0px !important;
+    }
+
+    .center .account-text{
+      padding-bottom: 0px;
+    }
+
+    .center{
+     text-align:center;
+     display: inline-block;
+     width: 100%;
+   }
+
+   .row-submit{
+     padding-top: 0px;
+   }
+
+   .item-md{
+     padding-left: 16px;
+     padding-right: 16px;
+   }
+
+   .scroll-content{
+      overflow: hidden;
+      padding-bottom: 0px;
+   }
+  }
+}

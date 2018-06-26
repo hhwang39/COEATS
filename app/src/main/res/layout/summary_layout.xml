@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/summary_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sum_resName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rationale"
+                android:text="COEATS International Restaurant"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sum_title_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/finger_paint"
+                android:text="Summary"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <ListView
+                android:id="@+id/sum_summary"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#80000000" />
+
+            <TextView
+                android:id="@+id/sum_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:text="Total: 350"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sum_title_coeats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/finger_paint"
+                android:text="COEATS"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/sum_coeats_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:text="Minimum bill : $ 3"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sum_coeats_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:text="Max wait time : 2 min"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sum_coeats_people"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:text="Minimum people : 3"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sum_title_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/finger_paint"
+                android:text="Address"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/sum_newaddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/sum_address_aptno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Apartment No."
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/sum_address_aptno_input"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/sum_address_aptno_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:theme="@style/MyEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sum_address_stno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="St address"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/sum_address_stno_input"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/sum_address_stno_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/MyEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sum_address_aptno_input" />
+
+                <TextView
+                    android:id="@+id/sum_address_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="City"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/sum_address_city_input"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/sum_address_city_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/MyEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sum_address_stno_input" />
+
+                <TextView
+                    android:id="@+id/sum_address_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="State"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/sum_address_state_input"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/sum_address_state_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/MyEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sum_address_city_input" />
+
+                <TextView
+                    android:id="@+id/sum_address_zip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Zipcode"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/sum_address_zip_input"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/sum_address_zip_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/MyEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sum_address_state_input" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/sum_submit"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="Submit"
+                tools:layout_editor_absoluteY="133dp" />
+        </LinearLayout>
+
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

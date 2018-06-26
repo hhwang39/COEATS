@@ -1,0 +1,55 @@
+<!--
+  Generated template for the OrderConstraintsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="coeats-red">
+    <button ion-button clear (click)="redirectHomepage()">
+      <ion-title>COEATS</ion-title>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="item-info" align="center">
+    <h2>Order Preferences</h2>
+  </div>
+
+  <div align="center">
+    Number of Joiners (min):
+    <button *ngIf="orderId=='null'" ion-button clear (click)="minusOnePeople()">
+      <ion-icon icon-start name="ios-remove-circle-outline" ></ion-icon>
+    </button>
+    <!-- {{ quantity == -1 ? 1 : quantity }} -->
+    {{minPeople}}
+      <!-- {{item.quantity}} -->
+    <button *ngIf="orderId=='null'" ion-button clear (click)="plusOnePeople()">
+      <ion-icon icon-end name="ios-add-circle-outline" ></ion-icon>
+    </button>
+  </div>
+
+  <div align="center">
+    Wait Time (max):
+    <button *ngIf="orderId=='null'" ion-button clear (click)="minusOneTime()">
+      <ion-icon icon-start name="ios-remove-circle-outline" ></ion-icon>
+    </button>
+    <!-- {{ quantity == -1 ? 1 : quantity }} -->
+    {{maxTime}} min
+      <!-- {{item.quantity}} -->
+    <button *ngIf="orderId=='null'" ion-button clear (click)="plusOneTime()">
+      <ion-icon icon-end name="ios-add-circle-outline" ></ion-icon>
+    </button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button *ngIf="orderId=='null'" ion-button id="order-button" (click)="initOrder(minPeople, maxTime)">Create Order</button>
+    <button *ngIf="orderId!='null'" ion-button id="order-button" (click)="joinOrder(orderId)">Join Order</button>
+  </ion-toolbar>
+</ion-footer>

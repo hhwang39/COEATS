@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/list_mng_confirm"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/list_mng_people"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/list_mng_status"
+        android:focusable="false"
+        android:text="Confirm" />
+
+    <TextView
+        android:id="@+id/list_mng_indco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="OrderType: COEATS"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/list_mng_res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/list_mng_indco"
+        android:text="Restaurant: The famous Chinese restaurant"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/list_mng_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/list_mng_res"
+        android:text="Status: In Delivery"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/list_mng_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/list_mng_status"
+        android:layout_toStartOf="@+id/list_mng_confirm"
+        android:text="Remaining time: N/A"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/list_mng_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/list_mng_countdown"
+        android:layout_toStartOf="@+id/list_mng_confirm"
+        android:text="Current money: N/A"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/list_mng_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/list_mng_money"
+        android:layout_toStartOf="@+id/list_mng_confirm"
+        android:text="Current people: N/A"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
